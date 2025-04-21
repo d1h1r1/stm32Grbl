@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F46\F46.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F46\F46.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Apr 20 23:02:42 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Mon Apr 21 13:33:03 2025
 <BR><P>
 <H3>Maximum Stack Usage =        824 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -950,7 +950,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
-<P><STRONG><a name="[98]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, stm32f4xx_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq))
+<P><STRONG><a name="[98]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, stm32f4xx_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
@@ -1282,8 +1282,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f4xx_it.o(.text.USART1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = USART1_IRQHandler &rArr; HandleUartIT &rArr; mc_reset &rArr; st_go_idle
+<P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 54 bytes, Stack size 4 bytes, stm32f4xx_it.o(.text.USART1_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = USART1_IRQHandler &rArr; HandleUartIT &rArr; mc_reset &rArr; st_go_idle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleUartIT
 </UL>
@@ -2693,7 +2693,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[148]"></a>uart_sendch</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, stm32utilities.o(.text.uart_sendch))
+<P><STRONG><a name="[148]"></a>uart_sendch</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32utilities.o(.text.uart_sendch))
 <BR><BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_write
 </UL>
 

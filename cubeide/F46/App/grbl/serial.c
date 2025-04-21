@@ -154,7 +154,7 @@ uint8_t serial_read()
     tail++;
     if (tail == RX_RING_BUFFER) { tail = 0; }
     serial_rx_buffer_tail = tail;
-
+    
     return data;
   }
 }

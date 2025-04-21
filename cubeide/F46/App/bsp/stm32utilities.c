@@ -147,7 +147,7 @@ void uart_init()
     memset(pDbgStr, 0, 80);
     //sprintf(pDbgStr,"\r\nClk:%ld\r\nTicks_us:%ld\r\nTicks_min:%.2f",SystemCoreClock,uTICKS_PER_MICROSECOND,fTICKS_PER_MINUTE);    //-- Clock check for Overclocking case
 //    sprintf(pDbgStr, "\r\nSysClk:%ld\r\n", SystemCoreClock); //-- Clock check for Overclocking case
-    uart_sendstr(pDbgStr);
+    // uart_sendstr(pDbgStr);
 
 }
 
@@ -160,8 +160,9 @@ void uart_sendstr(const char *pStr)
 
 void uart_sendch(uint8_t uC)
 {
-    LL_USART_TransmitData8(USART1, uC);
-    while (!(LL_USART_IsActiveFlag_TXE(USART1))); // sit till empty
+	while (!LL_USART_IsActiveFlag_TXE(USART1)); // sit till empty
+	LL_USART_ClearFlag_TC(USART1);
+	LL_USART_TransmitData8(USART1, uC);
 }
 
 

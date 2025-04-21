@@ -56,7 +56,8 @@ typedef enum
 /**
   * @}
   */
-
+#undef HSE_VALUE
+#define HSE_VALUE   ((uint32_t)8000000) /*!< Value of the External oscillator in Hz */
 /**
   * @}
   */
@@ -251,6 +252,7 @@ void HAL_DisableCompensationCell(void);
 uint32_t HAL_GetUIDw0(void);
 uint32_t HAL_GetUIDw1(void);
 uint32_t HAL_GetUIDw2(void);
+
 #if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) ||\
     defined(STM32F469xx) || defined(STM32F479xx)
 void HAL_EnableMemorySwappingBank(void);
